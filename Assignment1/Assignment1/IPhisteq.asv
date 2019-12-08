@@ -1,0 +1,22 @@
+%This file is used to implement IPhisteq
+
+
+
+function res = IPhisteq(imName)
+
+im = imread(imName);
+originalSize = size(im);
+MN = originalSize(1) * originalSize(2);
+histo = IPhistogram(imName);
+prk = double(histo) / MN;
+
+toHE = imread(imName);
+
+for i = 1:originalSize(1)
+    for j = 1:originalSize(2)
+        en
+end
+
+res = toHE;
+
+end
