@@ -1,4 +1,4 @@
-%This file is used to implementat IPhistogram
+
 
 function res = IPhistogram(imName) 
 
@@ -19,5 +19,6 @@ end
 
 bar( 1:256, rawHistogram );
 res = rawHistogram;
+
 
 end
