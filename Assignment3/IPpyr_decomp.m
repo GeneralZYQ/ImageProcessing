@@ -39,7 +39,7 @@ for i = 1:J
     if i == J
         fJSize = size(series{i});
         fJwidth = fJSize(1);
-        midG(gStartOffset:gStartOffset+fJSize-1, ((M-fJwidth)/2) + 1:((M+fJwidth)/2)) = series{i};
+        midG(gStartOffset:gStartOffset+fJSize-1, ((M-fJwidth)/2):((M+fJwidth)/2) -1) = series{i};
     end
     
     
