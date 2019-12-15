@@ -31,7 +31,7 @@ for i = 1:J
         
         currentSize = size(residual);
         residualWidth = currentSize(1);
-        midG(gStartOffset:gStartOffset+residualWidth-1, ((M-residualWidth)/2) + 1:((M+residualWidth)/2)) = residual;
+        midG(gStartOffset:gStartOffset+residualWidth-1, ((M-residualWidth)/2) :((M+residualWidth)/2)-1) = residual;
         gStartOffset = gStartOffset + residualWidth;
        
     end
