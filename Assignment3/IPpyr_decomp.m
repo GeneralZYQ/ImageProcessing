@@ -31,7 +31,7 @@ for i = 1:J
         
         currentSize = size(residual);
         residualWidth = currentSize(1);
-        midG(gStartOffset:gStartOffset+residualWidth-1, ((M-residualWidth)/2) :((M+residualWidth)/2)-1) = residual;
+        midG(gStartOffset:gStartOffset+residualWidth-1, ((M-residualWidth)/2)+1 :((M+residualWidth)/2)) = residual;
         gStartOffset = gStartOffset + residualWidth;
        
     end
@@ -39,7 +39,7 @@ for i = 1:J
     if i == J
         fJSize = size(series{i});
         fJwidth = fJSize(1);
-        midG(gStartOffset:gStartOffset+fJSize-1, ((M-fJwidth)/2) + 1:((M+fJwidth)/2)) = series{i};
+        midG(gStartOffset:gStartOffset+fJSize-1, ((M-fJwidth)/2) :((M+fJwidth)/2)-1) = series{i};
     end
     
     
