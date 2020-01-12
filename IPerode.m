@@ -14,19 +14,5 @@ for i = 2:h+1
     end
 end
 
-figure;
-subplot(121);
-colormap(gray(256));
-imagesc(A);
-axis equal;
-axis tight;
-title('INPUT IMAGE')
-
-subplot(122);
-colormap(gray(256));
-imagesc(temp(2:h+1, 2:w+1));
-axis equal;
-axis tight;
-title('EROSION IMAGE')
-
+res = temp(2:h+1, 2:w+1);
 end
