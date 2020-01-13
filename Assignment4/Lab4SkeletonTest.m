@@ -2,29 +2,27 @@
 I = imread('nutsbolts.tif');
 
 figure;
-%subplot(121);
-%colormap(gray(256));
-%imagesc(I);
-%axis equal;
-%axis tight;
-%title('INPUT IMAGE');
-
-skeleton = IPskeletondecomp(I);
-
-figure;
-subplot(121);
+subplot(131);
 colormap(gray(256));
-imagesc(skeleton);
+imagesc(I);
+axis equal;
+axis tight;
+title('INPUT IMAGE');
+
+[skel_img, skel_sets] = IPskeletondecomp(I);
+
+subplot(132);
+colormap(gray(256));
+imagesc(skel_img);
 axis equal;
 axis tight;
 title('SKELETON IMAGE');
 
-%I_recon = IPskeletonrecon(skeleton);
+I_recon = IPskeletonrecon(skel_sets);
 
-%figure;
-%subplot(121);
-%colormap(gray(256));
-%imagesc(I_recon);
-%axis equal;
-%axis tight;
-%title('RECONSTRUCTED IMAGE');
+subplot(133);
+colormap(gray(256));
+imagesc(I_recon);
+axis equal;
+axis tight;
+title('RECONSTRUCTED IMAGE');
